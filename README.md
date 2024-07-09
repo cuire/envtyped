@@ -52,7 +52,7 @@ SECRET_KEY = config.get("SECRET_KEY", optional=True) # Optional[str]
 # This library provides a helpers to read csv 
 from envtyped import Csv
 
-AVAILABLE_LANGUAGES = config.get("AVAILABLE_LANGUAGES", cast=Csv) # List[str]
+AVAILABLE_LANGUAGES = config.get("AVAILABLE_LANGUAGES", cast=Csv()) # List[str]
 
 # Csv can also be used to cast a list of string to a list of class
 class Language:
